@@ -1,0 +1,98 @@
+<templateSet group="user">
+  <template name="ngdir" value="(function() {&#10;    'use strict';&#10;    angular&#10;    .module('$APP$')&#10;    .directive('$DIRECTIVENAME$', $DIRECTIVENAME$);&#10;&#10;function $DIRECTIVENAME$() {&#10;    var directive = {&#10;        restrict: '$RESTRICT$',&#10;        templateUrl: '$TEMPLATEURL$/$DIRECTIVENAME$.html',&#10;        replace:$REPLACE$,&#10;        scope: {&#10;            $VAR1$: '$VALUE1$',&#10;&#9;&#9; &#10;        },&#10;        link:  $DIRECTIVENAME$Link,&#10;        controller: $DIRECTIVENAME$Ctrl,&#10;        // note: This would be '$DIRECTIVENAME$Ctrl' (the exported controller name, as string)&#10;        // if referring to a defined controller in its separate file.&#10;        controllerAs: '$ALIASCONTROLLER$',&#10;       // bindToController: true // because the scope is isolated&#10;    };&#10;&#10;    return directive;&#10;&#10;    function  $DIRECTIVENAME$Link(scope, el, attr, ctrl) {&#10;        //link function of directive&#10;        $END$&#10;    }&#10;}&#10;&#10;$DIRECTIVENAME$Ctrl.$inject = ['$scope'$INJECT$];&#10;&#10;function $DIRECTIVENAME$Ctrl($scope) {&#10;    // Injecting $scope just for comparison&#10;    var $ALIASCONTROLLER$ = this;&#10;&#10;    &#10;&#10;}&#10;&#10;})();" description="ng directive" toReformat="true" toShortenFQNames="true">
+    <variable name="APP" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="DIRECTIVENAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="RESTRICT" expression="capitalize(String)" defaultValue="&quot;AE&quot;" alwaysStopAt="true" />
+    <variable name="TEMPLATEURL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="REPLACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VALUE1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ALIASCONTROLLER" expression="decapitalize(String)" defaultValue="&quot;vm&quot;" alwaysStopAt="true" />
+    <variable name="INJECT" expression="enum(...)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngctrl" value="(function() {&#10;    'use strict';&#10;    angular.module($APP$).controller('$CONTROLLERNAME$', $CONTROLLERNAME$);&#10;$CONTROLLERNAME$.$inject = ['$scope'$INJECT$];&#10;    function $CONTROLLERNAME$ ($scope) {&#10;&#10;        var vm = this;&#10;        $END$&#10;       &#10;&#10;    }&#10;    })();" toReformat="true" toShortenFQNames="true">
+    <variable name="APP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTROLLERNAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="INJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngf" value="(function() {&#10;    'use strict';&#10;&#10;    angular&#10;        .module('$APPNAME$')&#10;        .factory('$FACTORYNAME$', $FACTORYNAME$);&#10;&#10;    $FACTORYNAME$.$inject = [$INJECT$];&#10;&#10;    function $FACTORYNAME$($INJECT$) {&#10;&#10;        //RETURNS OBJECT FOR FACTORY.&#10;        var provider = {&#10;            metadataStore: metadataStore,&#10;            newManager: newManager&#10;        };&#10;&#10;        return provider;&#10;&#10;&#10;    }&#10;})();" toReformat="true" toShortenFQNames="true">
+    <variable name="APPNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FACTORYNAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="INJECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>

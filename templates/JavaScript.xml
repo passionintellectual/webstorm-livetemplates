@@ -1,0 +1,22 @@
+<templateSet group="JavaScript">
+  <template name="cl" value="console.log('$obj1$--&gt;$obj$', $obj$);" description="console.log" toReformat="true" toShortenFQNames="true">
+    <variable name="obj1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="obj" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="switch" value="switch($expression$) {&#10;    case $1$:&#10;        $codeblock$&#10;        break;&#10;    case $2$:&#10;        $codeblock$&#10;        break;&#10;    default:&#10;        default $defaultcodeblock$&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="expression" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="codeblock" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="defaultcodeblock" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
